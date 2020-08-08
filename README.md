@@ -23,3 +23,6 @@ Da uma olhada na aba [Releases](https://github.com/omariosouto/pokedex/releases)
 
 ## License/Licença do Projeto
 [MIT License](./LICENSE) © [Alura](http://alura.com.br/)
+
+PAra heroku npm start
+vercel -> build

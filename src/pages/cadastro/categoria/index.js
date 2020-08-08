@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Template from '../../../components/Template';
+import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
-import Button from '../../../components/Button';
 
 function CadastroCategoria() {
   const valoresIniciais = {
@@ -46,7 +45,7 @@ function CadastroCategoria() {
   }, []);
 
   return (
-    <Template>
+    <PageDefault>
       <h1>
         Cadastro de Categoria:
         {values.nome}
@@ -110,14 +109,14 @@ function CadastroCategoria() {
           </label>
         </div> */}
 
-        <Button>
+        <button type="submit">
           Cadastrar
-        </Button>
+        </button>
       </form>
 
       <ul>
-        {categorias.map((categoria, indice) => (
-          <li key={`${categoria}${indice}`}>
+        {categorias.map((categoria) => (
+          <li key={`${categoria.id}`}>
             {categoria.titulo}
           </li>
         ))}
@@ -126,7 +125,7 @@ function CadastroCategoria() {
       <Link to="/">
         Ir para home
       </Link>
-    </Template>
+    </PageDefault>
   );
 }
 

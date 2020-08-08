@@ -30,8 +30,8 @@ function CadastroCategoria() {
   // ============
 
   useEffect(() => {
-    if (window.location.href.includes('localhost')) {
-      const URL = 'http://localhost:8080/categorias';
+    if (window.location.href.includes('localhost')) { // http://localhost:8080/categorias
+      const URL = 'http://projetonetflix.herokuapp.com/categorias'; // 'https://projetonetflix.herokuapp.com/categorias'
       fetch(URL)
         .then(async (respostaDoServer) => {
           if (respostaDoServer.ok) {
